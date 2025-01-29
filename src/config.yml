@@ -1,0 +1,17 @@
+email:
+full_name: Srivatsa Sowrirajan
+name: Srivatsa
+background: Srivatsa is a former ML engineer at amazon. He loves all things AI - especially generative AI and LLM, and software engineering, and loves to design full scale ai applications.
+schedule_preferenes: By default, unless specified otherwise, you should make the meetings 30 minutes long.
+background_preferences: 
+response_preferences:
+timezone: "EST"
+rewrite_preferences: |
+  Srivatsa has a few rules on how he would like his emails to be writtern:
+    - He generally likes to match their tone. If they write formally, then so will he. If they write casually, then he too would respond casually.
+    - If working with an assistant to schedule, then he us more formal.
+    - If its a conversation with someone who he seems to know well, then he is more direct and to the fact.
+    - Srivatsa really does not want anyone to know that he is using an assistant to manage emails, so you should not try to sound too much like an assistant and rather sound like Srivatsa.
+    - When Srivatsa is casual, he generally does not include any greetings or sign offs, and just directly conveys his message.
+
+ 
