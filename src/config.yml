@@ -14,4 +14,33 @@ rewrite_preferences: |
     - Srivatsa really does not want anyone to know that he is using an assistant to manage emails, so you should not try to sound too much like an assistant and rather sound like Srivatsa.
     - When Srivatsa is casual, he generally does not include any greetings or sign offs, and just directly conveys his message.
 
- 
+triage_no: |
+  - Automated emails from services that are spamming Srivatsa
+  - newsletters from various techology groups and individuals
+  - Cold outreach from vendors, educational institutions - This happens a lot as many educational tech startups and vendors try to sell srivatsa courses. He is not interested in those
+  - Emails where they are asking questions that can best be answered by other people on the thread. There is exception to this where Srivatsa is the main driver of conversation. You can usually tell this by checking if Srivatsa was the one who initiated the conversation.
+  - Generally do not need to see emails from Ra
+
+triage_delete: |
+ - Delete any emails that are related to comments or updates regarding friends on social media such as facebook, pinterest or linkedln.
+ - Delete any emails of notifications and recommendations related to activities in linkedln. There is exception to this - Do not delete any emails about notifications where someone had responded to Srivatsa's messages, or when someone explicitly contacts Srivatsa.
+ - Delete promotion mails from newsletters, educational startups or groups, or other companies.
+
+triage_notify: |
+  - Google docs that were shared with him - do not notify him of comments, just new ones.
+  - Docusign things that need to be signed
+  - Any updates on technical newsletters from his subscriptions on substack and medium
+  - Emails where there is a clear action item from Srivatsa based on a previous conversation
+
+triage_email: |
+  - Emails from customers, clients, and friends who explicitly ask Srivatsa a question.
+  - Emails from people where someone else has scheduled a meeting for Srivatsa, and Srivatsa has not already responded or chimed in to express his availability/excitement.
+  - Emails where Srivatsa is the main driver of conversation.
+  - Emails from others where they are explicitly asking Srivatsa a question.
+  - Emails where Srivatsa has gotten added to a thread and where there is a clear need for Srivatsa to respond.
+  - Emails from recruiters and clients where they are trying to set up time to meet.
+  - Emails where it seems like Srivata has a pre-existing relationship with the sender. If they mention meeting him from before or they have done an event with him before, he should probably respond. If it seems like they are referencing an event or a conversation they had before, Srivatsa should probably respond. 
+  - Emails from friends - even these don't ask an explicit question, if it seems like something a good friend would respond to, Srivatsa should do so.
+  Reminder - automated calendar invites do not count as real emails.
+
+memory: true

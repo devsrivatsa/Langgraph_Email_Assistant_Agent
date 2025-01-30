@@ -68,3 +68,8 @@ class State(TypedDict):
 
 
 
+email_template = """From: {author}
+To: {to}
+Subject: {subject}
+
+{email_thread}"""
