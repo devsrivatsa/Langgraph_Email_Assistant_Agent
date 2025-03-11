@@ -3,7 +3,7 @@ from langchain_core.messages import ToolMessage
 from langchain_core.runnables import RunnableConfig
 from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
-from ea.main.gmail import get_events_for_days
+from ea.gmail import get_events_for_days
 from ea.main.models import State
 from ea.main.config import get_config
 

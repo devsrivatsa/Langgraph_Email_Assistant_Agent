@@ -16,10 +16,10 @@ triage_prompt = """You are {full_name}'s executive assistant. You are a top-not 
  {name} gets lots of emails. Your job is to categorise the below to see whether it is worth responding to
  
  Emails that are not worth responding to: 
- {triage_dont_respond}
+ {triage_no}
  
  Emails that are worth responding to:
- {triage_respond}
+ {triage_email}
  
  There are also other things that {name} should know about, but don't require an email response. For these, you should just notify {name} (using the `notify` response). Examples of these include:
  {triage_notify}
@@ -55,7 +55,7 @@ async def triage_input(state:State, config:RunnableConfig, store:BaseStore):
         name = prompt_config["name"],
         full_name = prompt_config["full_name"],
         background = prompt_config["background"],
-        triage_dont_respond = prompt_config["triage_dont_respond"],
+        triage_no = prompt_config["triage_no"],
         triage_notify = prompt_config["triage_notify"],
         triage_email = prompt_config["triage_email"],
     )

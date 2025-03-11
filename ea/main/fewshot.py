@@ -34,5 +34,5 @@ async def get_few_shot_examples(email:Email, store:BaseStore, config: RunnableCo
     namespace = (config["configurable"].get("assistant_id","default"), "triage_examples")
     result = await store.asearch(namespace, query=str({"input": "email"}), limit=5)
     
-    return "" if result in None else format_similar_examples_store(result)
+    return "" if result is None else format_similar_examples_store(result)
 

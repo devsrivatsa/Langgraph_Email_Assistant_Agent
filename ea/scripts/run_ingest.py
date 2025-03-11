@@ -4,36 +4,35 @@ import httpx
 import uuid
 import hashlib
 from typing import Optional
-from main.gmail import fetch_group_emails
-from main.config import get_config
-from langgraph_sdk import get_client
+from ea.gmail import fetch_group_emails
+from ea.main.config import get_config
+import langgraph_sdk
 
 async def main(
         url: Optional[str] = None,
         minutes_since: int = 60,
-        gmail_token: Optional[str] = None,
-        gmail_secret: Optional[str] = None,
+        # gmail_token: Optional[str] = None,
+        # gmail_secret: Optional[str] = None,
         early: bool = True,
         rerun: bool = False,
         email: Optional[str] = None,
 ): 
     if not email:
-        email_address = get_config({"configurable: {}"})["email"]
+        email_address = get_config({"configurable":{}})["email"]
     else:
         email_address = email
     
     #comment this out - this is where the agent is hosted locally
-    local_url = "http://localhost:8000"
     if url is None:
-        client = get_client(local_url)
+        client = langgraph_sdk.get_client(url="http://127.0.0.1:2024")
     else:
-        client = get_client(url)
+        client = langgraph_sdk.get_client(url)
     
     for email in fetch_group_emails(
         email_address,
         minutes_since,
-        gmail_token,
-        gmail_secret
+        # gmail_token,
+        # gmail_secret
     ):
         thread_id = str(
             uuid.UUID(
@@ -54,7 +53,7 @@ async def main(
         if "user_respond" in email:
             await client.threads.update_state(thread_id, None, as_node="__end__")
             continue
-        recent_email = thread_info["metadata"]["recent_email"].get("email_id")
+        recent_email = thread_info["metadata"].get("email_id")
         if recent_email == email["id"]:
             if early:
                 break
@@ -97,18 +96,18 @@ if __name__ == "__main__":
         default=60,
         help="Only process emails that are less than this many minutes old.",
     )
-    parser.add_argument(
-        "--gmail-token",
-        type=str,
-        default=None,
-        help="The token to use in communicating with the Gmail API.",
-    )
-    parser.add_argument(
-        "--gmail-secret",
-        type=str,
-        default=None,
-        help="The creds to use in communicating with the Gmail API.",
-    )
+    # parser.add_argument(
+    #     "--gmail-token",
+    #     type=str,
+    #     default=None,
+    #     help="The token to use in communicating with the Gmail API.",
+    # )
+    # parser.add_argument(
+    #     "--gmail-secret",
+    #     type=str,
+    #     default=None,
+    #     help="The creds to use in communicating with the Gmail API.",
+    # )
     parser.add_argument(
         "--email",
         type=str,
@@ -122,8 +121,8 @@ if __name__ == "__main__":
         main(
             url=args.url,
             minutes_since=args.minutes_since,
-            gmail_token=args.gmail_token,
-            gmail_secret=args.gmail_secret,
+            # gmail_token=args.gmail_token,
+            # gmail_secret=args.gmail_secret,
             early=bool(args.early),
             rerun=bool(args.rerun),
             email=args.email

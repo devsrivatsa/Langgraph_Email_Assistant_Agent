@@ -5,10 +5,10 @@
     "."
   ],
   "graphs": {
-    "main": "./src/main/graph.py:graph",
-    "cron": "./src/cron_graph.py:graph",
-    "general_reflection_graph": "./src/reflection_graphs.py:general_reflection_graph",
-    "multi_reflection_graph": "./src/reflection_graphs.py:multi_reflection_graph"
+    "main": "./ea/main/graph.py:graph",
+    "cron": "./ea/cron/cron_graph.py:cron_graph",
+    "general_reflection_graph": "./ea/reflection/general_reflection.py:general_reflection_graph",
+    "multi_reflection_graph": "./ea/reflection/multi_reflection.py:multi_reflection_graph"
   },
   "store": {
     "index": {

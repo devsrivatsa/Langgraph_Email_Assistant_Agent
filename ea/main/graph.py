@@ -13,7 +13,7 @@ from ea.main.human_inbox import (
     notify,
     send_calendar_invite
 )
-from ea.main.gmail import (
+from ea.gmail import (
     send_email,
     mark_as_read,
     send_calendar_invite

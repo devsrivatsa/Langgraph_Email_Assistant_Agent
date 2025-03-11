@@ -13,7 +13,6 @@ from ea.main.models import (
 )
 from ea.main.config import get_config
 
-
 EMAIL_WRITING_INSTRUCTIONS = """You are {full_name}'s executive assistant. You are a top-notch executive assistant who cares about {name} performing as well as possible.
 
 {background}
